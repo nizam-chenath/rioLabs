@@ -29,7 +29,7 @@ a {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  padding: 10px;
+  padding: 20px 10px;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
 }
@@ -49,6 +49,9 @@ a {
   height: 40px;
   border-radius: 10px;
   padding-left: 30px;
+  border: none;
+  -webkit-box-shadow: 1px 1.5px 10px #696868;
+          box-shadow: 1px 1.5px 10px #696868;
 }
 
 .product-cards {
@@ -57,12 +60,15 @@ a {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  margin: 20px 0px;
 }
 
 .product-component {
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
+  -webkit-box-shadow: 1px 1.5px 10px #696868;
+          box-shadow: 1px 1.5px 10px #696868;
 }
 
 .product-component .card {
@@ -118,8 +124,8 @@ a {
 .detail-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 0.7fr 1fr;
+      grid-template-columns: 0.7fr 1fr;
   padding: 20px;
   border: 1px solid gray;
 }
@@ -219,5 +225,55 @@ a {
 
 .pagination .ul .active-li {
   background-color: #34435E;
+}
+
+@media (max-width: 796px) {
+  .product-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .category-container button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  .detail-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .detail-container .detail-image {
+    height: 50vh;
+  }
+  .detail-container .detail-image img {
+    height: 300px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 560px) {
+  .product-cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+  .category-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .detail-container .detail-image {
+    width: 100vw;
+  }
+  .detail-container .detail-details p {
+    font-size: 12px;
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

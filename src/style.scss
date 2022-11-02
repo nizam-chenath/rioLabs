@@ -18,7 +18,7 @@ a{
     height: 100px;
     display: grid;
     place-items: center;
-    padding: 10px;
+    padding: 20px 10px;
     grid-template-columns: 1fr 1fr;
     button{
         padding: 10px 20px;
@@ -38,7 +38,7 @@ a{
             border-radius: 10px;
             padding-left: 30px;
             border: none;
-            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            box-shadow: 1px 1.5px 10px rgb(105, 104, 104);
         }
     }
 }
@@ -46,12 +46,14 @@ a{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    margin: 20px 0px;
 }
 .product-component{
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 1px 1.5px 10px rgb(105, 104, 104);
+
     
   
     .card{
@@ -91,7 +93,7 @@ a{
 
 .detail-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.7fr 1fr;
     padding: 20px;
     border: 1px solid gray;
     .detail-image{
@@ -163,7 +165,7 @@ a{
            justify-content: center;
            .a{
                text-decoration: none;
-               color: white
+               color: white;
            }
         
         }
@@ -183,6 +185,18 @@ a{
             font-size: 12px;
         }
     }
+    .detail-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        .detail-image{
+            height: 50vh;
+            img{
+                   height: 300px;
+                   width: 200px;
+            }
+        }
+    }
     
 }
 @media(max-width:560px){
@@ -194,6 +208,18 @@ a{
     .category-container{
         display: grid;
         grid-template-columns: 1fr;
+    }
+    .detail-container{
+        .detail-image{
+            width: 100vw;
+        }
+        .detail-details{
+            p{
+                font-size: 12px;
+                width: 300px;
+
+            }
+        }
     }
    
 }
